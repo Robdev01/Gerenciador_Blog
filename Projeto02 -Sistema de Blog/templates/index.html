@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div class="container">
+    <h1 class="blog-title">Gerenciador de Blogs</h1>
+    <ul class="post-list">
+        {% for post in posts %}
+        <li class="post">
+            <h2 class="post-title">{{ post.titulo }}</h2>
+            {% if post.imagem_url %}
+            <img src="{{ post.imagem_url }}" alt="{{ post.titulo }}" class="post-image">
+            {% endif %}
+            <p class="post-content">{{ post.conteudo }}</p>
+            <a href="{{ url_for('ver_post', id=post.id) }}" class="bnt">Ver detalhes</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('criar_post') }}" class="btn">Criar novo post</a>
+ </div>
+</body>
+</html>
+

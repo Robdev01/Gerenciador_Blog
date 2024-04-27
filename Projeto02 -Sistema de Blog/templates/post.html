@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>{{ post.titulo }}</h1>
+    {% if post.imagem_url %}
+    <img src="{{ post.imagem_url }}" alt="{{ post.titulo }}" class="post-image">
+    {% endif %}
+    <p>{{ post.conteudo }}</p>
+</div>
+    <a href="{{ url_for('index') }}">Voltar para o início</a>
+    <a href="{{ url_for('editar_post', id=post.id) }}">Editar</a>
+    <a href="{{ url_for('excluir_post', id=post.id) }}">Excluir</a>
+</body>
+</html>

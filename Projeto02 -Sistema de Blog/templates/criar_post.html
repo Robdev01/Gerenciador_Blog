@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Novo Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Criar Novo Post</h1>
+    
+<div class="container">
+    <form action="{{ url_for('criar_post') }}" method="post" enctype="multipart/form-data">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo"><br>
+        <label for="conteudo">Conteúdo:</label><br>
+        <textarea id="conteudo" name="conteudo"></textarea><br>
+        <label for="foto">Foto:</label><br>
+        <input type="file" id="foto" name="foto"><br>
+        <button type="submit">Criar</button>
+    </form>
+</div>
+</body>
+</html>
