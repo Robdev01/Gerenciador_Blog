@@ -28,6 +28,7 @@
 -CSS
 
 3️⃣ Como Contribuir:
+
 Sinta-se à vontade para clonar o repositório
 Faça melhorias ou adicione novos recursos
 Abra uma solicitação de pull request
