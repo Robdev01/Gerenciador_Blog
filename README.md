@@ -5,7 +5,8 @@
 ✨ Recursos do Projeto:
 
 1️⃣ Funcionalidades do Blog:
-Listagem de Posts
+Listagem de Posts;
+
 Visualização de Detalhes de Post
 Criação de Novos Posts
 Edição e Exclusão de Posts
